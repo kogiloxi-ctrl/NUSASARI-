@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Es Kelapa Muda Nusa Sari</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1fff4;
+  color: #222;
+}
+
+.header {
+  background: linear-gradient(135deg, #087f36, #28b85b);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  border-radius: 0 0 25px 25px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px 15px;
+}
+
+.title {
+  text-align: center;
+  color: #087f36;
+  margin-bottom: 20px;
+}
+
+.menu {
+  background: white;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.menu h3 {
+  margin: 0 0 7px;
+  font-size: 17px;
+}
+
+.price {
+  color: #087f36;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+button {
+  border: 0;
+  background: #25D366;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+.info {
+  text-align: center;
+  background: #dff7e6;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  color: #087f36;
+}
+
+.footer {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>🥥 Es Kelapa Muda Nusa Sari</h1>
+  <p>Segar • Manis • Nikmat</p>
+</div>
+
+<div class="container">
+
+  <h2 class="title">Menu Kami</h2>
+
+  <div class="menu">
+    <div>
+      <h3>🥥 Es Kelapa Gula Putih</h3>
+      <div class="price">Rp5.000</div>
+    </div>
+    <button onclick="pesan('Es Kelapa Gula Putih', 5000)">
+      Pesan
+    </button>
+  </div>
+
+  <div class="menu">
+    <div>
+      <h3>🥥 Es Kelapa Gula Merah</h3>
+      <div class="price">Rp5.000</div>
+    </div>
+    <button onclick="pesan('Es Kelapa Gula Merah', 5000)">
+      Pesan
+    </button>
+  </div>
+
+  <div class="menu">
+    <div>
+      <h3>🥥 Es Kelapa Muda</h3>
+      <div class="price">Rp13.000</div>
+    </div>
+    <button onclick="pesan('Es Kelapa Muda', 13000)">
+      Pesan
+    </button>
+  </div>
+
+  <div class="menu">
+    <div>
+      <h3>🥥 Es Kelapa Gula Merah Cepat Merah</h3>
+      <div class="price">Rp15.000</div>
+    </div>
+    <button onclick="pesan('Es Kelapa Gula Merah Cepat Merah', 15000)">
+      Pesan
+    </button>
+  </div>
+
+  <div class="info">
+    📲 Klik <b>Pesan</b> untuk langsung order melalui WhatsApp.
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2026 Es Kelapa Muda Nusa Sari
+</div>
+
+<script>
+function pesan(menu, harga) {
+
+  // GANTI NOMOR INI DENGAN NOMOR WHATSAPP NUSA SARI
+  const nomorWA = "628xxxxxxxxxx";
+
+  const teks =
+    "Halo Nusa Sari 👋%0A%0A" +
+    "Saya mau pesan:%0A" +
+    "🥥 " + menu + "%0A" +
+    "💰 Harga: Rp" + harga.toLocaleString("id-ID") + "%0A%0A" +
+    "Mohon diproses ya. Terima kasih 🙏";
+
+  window.open(
+    "https://wa.me/" + nomorWA + "?text=" + teks,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
